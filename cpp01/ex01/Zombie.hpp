@@ -1,0 +1,43 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                                            */
+/*   Filename: zombie.hpp                                                     */
+/*   Author:   Peru Riezu <riezumunozperu@gmail.com>                          */
+/*   github:   https://github.com/priezu-m                                    */
+/*   Licence:  GPLv3                                                          */
+/*   Created:  2023/11/30 12:01:43                                            */
+/*   Updated:  2023/11/30 13:26:24                                            */
+/*                                                                            */
+/* ************************************************************************** */
+
+#pragma once
+
+#include <string>
+
+;
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wpragmas"
+#pragma GCC diagnostic warning "-Weverything"
+#pragma GCC diagnostic ignored "-Wempty-translation-unit"
+#pragma GCC diagnostic ignored "-Wunused-macros"
+#pragma GCC diagnostic ignored "-Wextra-semi"
+;
+
+class Zombie
+{
+	private:
+		std::string name;
+
+	public:
+		explicit Zombie(std::string const &arg_name);
+		explicit Zombie(void);
+		~Zombie(void);
+
+		void			anounce(void) const;
+
+		static Zombie	*newZombie(std::string const &name);
+		static void		randomChump(std::string const &name);
+		static Zombie	*zombieHorde(int N, const std::string &name);
+};
+
+#pragma GCC diagnostic pop

@@ -1,0 +1,22 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/;"	extras:pseudo
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/;"	extras:pseudo
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/;"	extras:pseudo
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/;"	extras:pseudo
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/;"	extras:pseudo
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/;"	extras:pseudo
+!_TAG_PROC_CWD	/home/peru/cpp00/cpp0000/	//;"	extras:pseudo
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//;"	extras:pseudo
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/;"	extras:pseudo
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/;"	extras:pseudo
+!_TAG_PROGRAM_VERSION	5.9.0	//;"	extras:pseudo
+argc	megaphone.cpp	/^int main(int argc, char **argv)$/;"	kind:parameter	line:30	language:C++	scope:function:main	typeref:typename:int	file:	roles:def	extras:fileScope	nth:0
+argv	megaphone.cpp	/^int main(int argc, char **argv)$/;"	kind:parameter	line:30	language:C++	scope:function:main	typeref:typename:char **	file:	roles:def	extras:fileScope	nth:1
+cctype	megaphone.cpp	/^#include <cctype>/;"	kind:header	line:13	language:C++	roles:system	extras:reference
+cstddef	megaphone.cpp	/^#include <cstddef>/;"	kind:header	line:14	language:C++	roles:system	extras:reference
+cstdlib	megaphone.cpp	/^#include <cstdlib>/;"	kind:header	line:15	language:C++	roles:system	extras:reference
+i	megaphone.cpp	/^	for (int i = 1; i < argc; i++)$/;"	kind:local	line:38	language:C++	scope:function:main	typeref:typename:int	file:	roles:def	extras:fileScope	end:38
+iostream	megaphone.cpp	/^#include <iostream>/;"	kind:header	line:16	language:C++	roles:system	extras:reference
+j	megaphone.cpp	/^		for (size_t j = 0; argv[i][j] != NULL; j++)$/;"	kind:local	line:40	language:C++	scope:function:main	typeref:typename:size_t	file:	roles:def	extras:fileScope	end:40
+main	megaphone.cpp	/^int main(int argc, char **argv)$/;"	kind:function	line:30	language:C++	typeref:typename:int	signature:(int argc,char ** argv)	roles:def	end:48
+megaphone.cpp	megaphone.cpp	1;"	kind:file	line:1	language:C++	roles:def	extras:inputFile	end:50	epoch:1701341973
+string	megaphone.cpp	/^#include <string>/;"	kind:header	line:17	language:C++	roles:system	extras:reference
