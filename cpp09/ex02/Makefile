@@ -6,7 +6,7 @@
 #    github:   https://github.com/priezu-m                                     #
 #    Licence:  GPLv3                                                           #
 #    Created:  2023/09/27 18:57:07                                             #
-#    Updated:  2024/01/02 16:25:34                                             #
+#    Updated:  2024/01/11 18:56:47                                             #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,13 +16,13 @@
 
 SHELL :=			bash
 CC :=				g++
-FLAGS :=			-O2 -flto -Wall -Wextra -std=c++98
+FLAGS :=			-O2 -flto -Wall -Wextra -std=c++14
 DEBUG_FLAGS :=		-O0 -g3 -fsanitize=address,undefined,leak
 LDFLAGS :=			
 
 ################################################################################
 
-NAME :=				btc
+NAME :=				misort
 
 DEP_PATH :=			./DEP
 DEP_PATH_MAKE :=	DEP/

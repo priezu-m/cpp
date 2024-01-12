@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2024/01/01 12:43:27                                            */
-/*   Updated:  2024/01/01 16:03:27                                            */
+/*   Updated:  2024/01/02 19:21:19                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,25 @@
 #pragma GCC diagnostic ignored "-Wextra-semi"
 ;
 
+typedef struct s_amount
+{
+		union u_amount
+		{
+				double double_amount;
+				int	   int_amount;
+		} amount;
+
+		enum e_type
+		{
+			e_int,
+			e_double
+		} type;
+} t_amount;
+
 class BitcoinExchange
 {
 	private:
-		std::map<std::string, float> date_to_value;
+		std::map<std::string, t_amount> date_to_value;
 
 	public:
 		BitcoinExchange(void);
@@ -35,8 +50,7 @@ class BitcoinExchange
 		BitcoinExchange operator=(BitcoinExchange const &bitcoin_exchange);
 		~BitcoinExchange(void);
 
-		void exchange(std::string cuantity_database);
-		void set_value_database(std::string const &value_database);
+		void exchange(std::string const &cuantity_database) const;
 };
 
 #pragma GCC diagnostic pop

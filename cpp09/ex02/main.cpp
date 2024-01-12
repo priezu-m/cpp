@@ -5,15 +5,18 @@
 /*   Author:   Peru Riezu <riezumunozperu@gmail.com>                          */
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
-/*   Created:  2024/01/01 12:43:20                                            */
-/*   Updated:  2024/01/02 20:44:38                                            */
+/*   Created:  2024/01/11 11:46:07                                            */
+/*   Updated:  2024/01/12 16:12:36                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "BitcoinExchange.hpp"
-#include <exception>
+#include "misort.hpp"
+#include "test_functions.hpp"
+#include <deque>
+#include <functional>
 #include <iostream>
-#include <new>
+#include <list>
+#include <vector>
 
 ;
 #pragma GCC diagnostic push
@@ -24,28 +27,20 @@
 #pragma GCC diagnostic ignored "-Wextra-semi"
 ;
 
-int main(int argc, char **argv)
+
+
+int main(void)
 {
-	if (argc == 2)
-	{
-		try
-		{
-			BitcoinExchange bitcoin_exchange("data.csv");
-			bitcoin_exchange.exchange(argv[1]);
-		}
-		catch (std::bad_alloc const &)
-		{
-			std::cerr << "program ran out of memory, aborting.\n";
-		}
-		catch (...)
-		{
-		}
-	}
-	else
-	{
-		std::cout << "program needs to recive the filename of a file whit a cuantity database \n";
-	}
-	return (0);
+	std::vector<int> v;
+	std::list<int>	 l;
+	std::deque<int>	 dq;
+
+	random_initialization(v);
+	time_internal(misort<std::vector<int>::iterator, bool (int x, int y)>, v.begin(), v.end(), compare, "std::vector");
+	random_initialization(l);
+	time_internal(misort<std::list<int>::iterator, bool (int x, int y)>, l.begin(), l.end(), compare, "std::list");
+	random_initialization(dq);
+	time_internal(misort<std::deque<int>::iterator, bool (int x, int y)>, dq.begin(), dq.end(), compare, "std::deque");
 }
 
 #pragma GCC diagnostic pop
