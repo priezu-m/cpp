@@ -14,15 +14,6 @@
 
 #include "ClapTrap.hpp"
 
-;
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpragmas"
-#pragma GCC diagnostic warning "-Weverything"
-#pragma GCC diagnostic ignored "-Wempty-translation-unit"
-#pragma GCC diagnostic ignored "-Wunused-macros"
-#pragma GCC diagnostic ignored "-Wextra-semi"
-;
-
 class ScavTrap : public ClapTrap
 {
 
@@ -35,5 +26,3 @@ class ScavTrap : public ClapTrap
 
 		void	 guardGate(void);
 };
-
-#pragma GCC diagnostic pop

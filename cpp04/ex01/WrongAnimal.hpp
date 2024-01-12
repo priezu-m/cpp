@@ -11,16 +11,8 @@
 /* ************************************************************************** */
 
 #pragma once
-#include <string>
 
-;
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpragmas"
-#pragma GCC diagnostic warning "-Weverything"
-#pragma GCC diagnostic ignored "-Wempty-translation-unit"
-#pragma GCC diagnostic ignored "-Wunused-macros"
-#pragma GCC diagnostic ignored "-Wextra-semi"
-;
+#include <string>
 
 class WrongAnimal
 {
@@ -34,5 +26,3 @@ class WrongAnimal
 		void		makeSound(void) const;
 		std::string getType(void) const;
 };
-
-#pragma GCC diagnostic pop

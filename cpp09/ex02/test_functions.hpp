@@ -22,15 +22,6 @@
 #include <time.h>
 #include <unistd.h>
 
-;
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpragmas"
-#pragma GCC diagnostic warning "-Weverything"
-#pragma GCC diagnostic ignored "-Wempty-translation-unit"
-#pragma GCC diagnostic ignored "-Wunused-macros"
-#pragma GCC diagnostic ignored "-Wextra-semi"
-#pragma GCC diagnostic ignored "-Wzero-as-null-pointer-constant"
-;
 static size_t g_count = 0;
 
 inline bool	  compare(int x, int y)
@@ -46,7 +37,7 @@ void random_initialization(container_type &c)
 
 	gettimeofday(&tv, NULL);
 	// NOLINTNEXTLINE
-	srandom(tv.tv_usec);
+	srand(tv.tv_usec);
 	// NOLINTNEXTLINE
 	std::size_t size = (rand() % 2998) + 2;
 
@@ -72,5 +63,3 @@ void time_internal(function_type f, iterator b, iterator e, compare_function_typ
 	std::cout << "time to process a range of " << std::distance(b, e) << " whit " << name << " "
 			  << std::fixed << tvr.tv_sec + (tvr.tv_usec) / 1000000.0L << "us and " << g_count << " comparasons\n";
 }
-
-#pragma GCC diagnostic pop

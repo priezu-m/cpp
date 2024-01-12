@@ -18,15 +18,6 @@
 #include <stdexcept>
 #include <string>
 
-;
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpragmas"
-#pragma GCC diagnostic warning "-Weverything"
-#pragma GCC diagnostic ignored "-Wempty-translation-unit"
-#pragma GCC diagnostic ignored "-Wunused-macros"
-#pragma GCC diagnostic ignored "-Wextra-semi"
-;
-
 class Form;
 
 class Bureaucrat
@@ -68,5 +59,3 @@ class Bureaucrat
 };
 
 std::ostream		  &operator<<(std::ostream &ostream, Bureaucrat const &bureaucrat);
-
-#pragma GCC diagnostic pop

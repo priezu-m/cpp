@@ -18,15 +18,6 @@
 #include <sys/types.h>
 #include <vector>
 
-;
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpragmas"
-#pragma GCC diagnostic warning "-Weverything"
-#pragma GCC diagnostic ignored "-Wempty-translation-unit"
-#pragma GCC diagnostic ignored "-Wunused-macros"
-#pragma GCC diagnostic ignored "-Wextra-semi"
-;
-
 template<typename iterator_type>
 void do_moves(iterator_type begin, iterator_type end, std::vector<std::size_t> moves)
 {
@@ -255,5 +246,3 @@ void misort(iterator_type begin, iterator_type end, compare_function cmpr)
 {
 	do_moves(begin, end, get_moves_misort(begin, end, cmpr));
 }
-
-#pragma GCC diagnostic pop

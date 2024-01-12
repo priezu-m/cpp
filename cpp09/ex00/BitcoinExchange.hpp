@@ -14,15 +14,6 @@
 #include <map>
 #include <string>
 
-;
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpragmas"
-#pragma GCC diagnostic warning "-Weverything"
-#pragma GCC diagnostic ignored "-Wempty-translation-unit"
-#pragma GCC diagnostic ignored "-Wunused-macros"
-#pragma GCC diagnostic ignored "-Wextra-semi"
-;
-
 typedef struct s_amount
 {
 		union u_amount
@@ -52,5 +43,3 @@ class BitcoinExchange
 
 		void exchange(std::string const &cuantity_database) const;
 };
-
-#pragma GCC diagnostic pop

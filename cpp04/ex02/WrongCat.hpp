@@ -14,17 +14,6 @@
 #include "Animal.hpp"
 #include "WrongAnimal.hpp"
 
-;
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpragmas"
-#pragma GCC diagnostic warning "-Weverything"
-#pragma GCC diagnostic ignored "-Wempty-translation-unit"
-#pragma GCC diagnostic ignored "-Wunused-macros"
-#pragma GCC diagnostic ignored "-Wextra-semi"
-#pragma GCC diagnostic ignored "-Wsuggest-destructor-override"
-#pragma GCC diagnostic ignored "-Wsuggest-override"
-;
-
 class WrongCat : public WrongAnimal
 {
 	public:
@@ -33,5 +22,3 @@ class WrongCat : public WrongAnimal
 
 		void makeSound(void) const;
 };
-
-#pragma GCC diagnostic pop

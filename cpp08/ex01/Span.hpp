@@ -13,15 +13,6 @@
 #pragma once
 #include <vector>
 
-;
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpragmas"
-#pragma GCC diagnostic warning "-Weverything"
-#pragma GCC diagnostic ignored "-Wempty-translation-unit"
-#pragma GCC diagnostic ignored "-Wunused-macros"
-#pragma GCC diagnostic ignored "-Wextra-semi"
-;
-
 class Span
 {
 	private:
@@ -40,5 +31,3 @@ class Span
 		unsigned shortestSpan(void);
 		unsigned longestSpan(void);
 };
-
-#pragma GCC diagnostic pop

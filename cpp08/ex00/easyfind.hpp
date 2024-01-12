@@ -27,10 +27,6 @@ typename T::iterator easyfind(T &ints, int n)
 {
 	typename T::iterator const iterator = std::find(ints.begin(), ints.end(), n);
 
-	if (iterator == ints.end())
-	{
-		return (static_cast<typename T::iterator>(NULL));
-	}
 	return (iterator);
 }
 

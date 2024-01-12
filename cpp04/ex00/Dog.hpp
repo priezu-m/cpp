@@ -11,19 +11,9 @@
 /* ************************************************************************** */
 
 #pragma once
+
 #include "Animal.hpp"
 #include <iostream>
-
-;
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpragmas"
-#pragma GCC diagnostic warning "-Weverything"
-#pragma GCC diagnostic ignored "-Wempty-translation-unit"
-#pragma GCC diagnostic ignored "-Wunused-macros"
-#pragma GCC diagnostic ignored "-Wextra-semi"
-#pragma GCC diagnostic ignored "-Wsuggest-destructor-override"
-#pragma GCC diagnostic ignored "-Wsuggest-override"
-;
 
 class Dog : public Animal
 {
@@ -36,4 +26,3 @@ class Dog : public Animal
 		void makeSound(void) const;
 };
 
-#pragma GCC diagnostic pop

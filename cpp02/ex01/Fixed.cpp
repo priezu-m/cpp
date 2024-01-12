@@ -20,17 +20,6 @@
 #include <stdlib.h>
 #include <string>
 
-;
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpragmas"
-#pragma GCC diagnostic warning "-Weverything"
-#pragma GCC diagnostic ignored "-Wempty-translation-unit"
-#pragma GCC diagnostic ignored "-Wunused-macros"
-#pragma GCC diagnostic ignored "-Wextra-semi"
-#pragma GCC diagnostic ignored "-Wzero-as-null-pointer-constant"
-#pragma GCC diagnostic ignored "-Wc99-designator"
-;
-
 Fixed::Fixed(void) : num(0)
 {
 	std::cout << "Default constructor called\n";
@@ -189,5 +178,3 @@ std::ostream &operator<<(std::ostream &os, Fixed const &num)
 	os << num.toFloat();
 	return (os);
 }
-
-#pragma GCC diagnostic pop

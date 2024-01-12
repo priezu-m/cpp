@@ -11,16 +11,8 @@
 /* ************************************************************************** */
 
 #pragma once
-#include "ClapTrap.hpp"
 
-;
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpragmas"
-#pragma GCC diagnostic warning "-Weverything"
-#pragma GCC diagnostic ignored "-Wempty-translation-unit"
-#pragma GCC diagnostic ignored "-Wunused-macros"
-#pragma GCC diagnostic ignored "-Wextra-semi"
-;
+#include "ClapTrap.hpp"
 
 class FragTrap : public ClapTrap
 {
@@ -34,5 +26,3 @@ class FragTrap : public ClapTrap
 
 		void	 highFivesGuys(void);
 };
-
-#pragma GCC diagnostic pop

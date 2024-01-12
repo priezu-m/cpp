@@ -16,7 +16,7 @@
 
 SHELL :=			bash
 CC :=				g++
-FLAGS :=			-O2 -flto -Wall -Wextra -std=c++14
+FLAGS :=			-O2 -flto -Wall -Wextra -std=c++98
 DEBUG_FLAGS :=		-O0 -g3 -fsanitize=address,undefined,leak
 LDFLAGS :=			
 

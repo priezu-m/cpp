@@ -20,15 +20,6 @@
 #include <string.h>
 #include <string>
 
-;
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpragmas"
-#pragma GCC diagnostic warning "-Weverything"
-#pragma GCC diagnostic ignored "-Wempty-translation-unit"
-#pragma GCC diagnostic ignored "-Wunused-macros"
-#pragma GCC diagnostic ignored "-Wextra-semi"
-;
-
 class Base
 {
 	public:
@@ -139,5 +130,3 @@ int main(void)
 	identify(p);
 	identify(*p);
 }
-
-#pragma GCC diagnostic pop
