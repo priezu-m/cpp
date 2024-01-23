@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/11/27 19:24:45                                            */
-/*   Updated:  2023/11/27 19:30:34                                            */
+/*   Updated:  2024/01/23 07:22:28                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Phonebook::Phonebook(Phonebook const &arg) : next_free_slot(arg.next_free_slot)
 {
 	for (int i = 0; i < 8; i++)
 	{
-		if (arg.contacts[i].initialized == false)
+		if (arg.contacts[i].get_initialized() == false)
 		{
 			break;
 		}

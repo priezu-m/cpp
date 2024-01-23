@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/11/27 19:47:34                                            */
-/*   Updated:  2023/11/27 19:49:53                                            */
+/*   Updated:  2024/01/23 07:26:44                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,36 @@ Contact::Contact(std::string const &arg_first_name, std::string const &arg_last_
 
 Contact::~Contact()
 {
+}
+
+std::string Contact::get_first_name(void) const
+{
+	return (first_name);
+}
+
+std::string Contact::get_last_name(void) const
+{
+	return (last_name);
+}
+
+std::string Contact::get_nick_name(void) const
+{
+	return (nick_name);
+}
+
+std::string Contact::get_phone_number(void) const
+{
+	return (phone_number);
+}
+
+std::string Contact::get_darkest_secret(void) const
+{
+	return (darkest_secret);
+}
+
+bool Contact::get_initialized(void) const
+{
+	return (initialized);
 }
 
 #pragma GCC diagnostic pop

@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/11/30 13:04:27                                            */
-/*   Updated:  2023/12/02 01:38:54                                            */
+/*   Updated:  2024/01/23 07:54:17                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@
 
 int main(void)
 {
-	const int	n = 10;
-	Zombie		*zombie_horde = Zombie::zombieHorde(n, "horde member");
+	int const n = 10;
+	Zombie	 *zombie_horde = Zombie::zombieHorde(n, "horde member");
 
 	for (int i = 0; i < n; i++)
 	{
-		zombie_horde[n].anounce();
+		zombie_horde[i].anounce();
 	}
 	delete[] (zombie_horde);
 }

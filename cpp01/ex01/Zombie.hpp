@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                                            */
-/*   Filename: zombie.hpp                                                     */
+/*   Filename: Zombie.hpp                                                     */
 /*   Author:   Peru Riezu <riezumunozperu@gmail.com>                          */
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/11/30 12:01:43                                            */
-/*   Updated:  2023/11/30 13:26:24                                            */
+/*   Updated:  2024/01/23 07:49:39                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ class Zombie
 		explicit Zombie(void);
 		~Zombie(void);
 
-		void			anounce(void) const;
+		void		   anounce(void) const;
 
-		static Zombie	*newZombie(std::string const &name);
-		static void		randomChump(std::string const &name);
-		static Zombie	*zombieHorde(int N, const std::string &name);
+		static Zombie *newZombie(std::string const &name);
+		static void	   randomChump(std::string const &name);
+		static Zombie *zombieHorde(int N, std::string const &name_in);
 };
 
 #pragma GCC diagnostic pop

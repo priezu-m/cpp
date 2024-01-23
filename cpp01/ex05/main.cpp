@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/12/04 15:38:33                                            */
-/*   Updated:  2023/12/04 18:25:56                                            */
+/*   Updated:  2024/01/23 08:47:18                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ int main(void)
 {
 	Harl costumer;
 
-	costumer.complain("WARNING");
-	costumer.complain("warning");
+	costumer.complain("DEBUG");
 }
 
 #pragma GCC diagnostic pop

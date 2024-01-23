@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/12/02 01:39:15                                            */
-/*   Updated:  2023/12/02 01:39:58                                            */
+/*   Updated:  2024/01/23 07:51:10                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,22 @@
 #pragma GCC diagnostic ignored "-Wzero-as-null-pointer-constant"
 ;
 
-Zombie *Zombie::zombieHorde(int N, const std::string &name)
+Zombie *Zombie::zombieHorde(int N, std::string const &name_in)
 {
-	Zombie	*zombie_horde;
+	Zombie *zombie_horde;
 
 	if (N <= 0)
 	{
 		return (NULL);
 	}
-	zombie_horde= new Zombie[static_cast<unsigned>(N)]();
+	zombie_horde = new Zombie[static_cast<unsigned>(N)]();
+	if (zombie_horde == NULL)
+	{
+		return (NULL);
+	}
 	for (int i = 0; i < N; i++)
 	{
-		zombie_horde[i].name = name;
+		zombie_horde[i].name = name_in;
 	}
 	return (zombie_horde);
 }

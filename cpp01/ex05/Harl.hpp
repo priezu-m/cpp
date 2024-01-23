@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/12/04 16:37:43                                            */
-/*   Updated:  2023/12/04 18:21:57                                            */
+/*   Updated:  2024/01/23 08:59:03                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,12 @@ class Harl
 		typedef void (*fun_ptr)(void);
 		static fun_ptr fun_table[8];
 
+	public:
+		static void complain(std::string const &level);
 		static void	   debug(void);
 		static void	   info(void);
 		static void	   warning(void);
 		static void	   error(void);
-
-	public:
-		static void complain(std::string const &level);
 };
 
 #pragma GCC diagnostic pop

@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/12/04 03:39:04                                            */
-/*   Updated:  2023/12/04 04:40:19                                            */
+/*   Updated:  2024/01/23 08:11:58                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,10 +75,6 @@ static void do_substitutions(char **argv)
 	{
 		in.erase(pos, find.size());
 		in.insert(pos, replace);
-		if (in.find(replace, pos) != pos)
-		{
-			throw(std::exception());
-		}
 		pos = in.find(find);
 	}
 	write_to_file(std::string(argv[1]).append(".replace"), in);

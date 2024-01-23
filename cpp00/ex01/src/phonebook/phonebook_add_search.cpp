@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/11/27 19:28:17                                            */
-/*   Updated:  2023/11/27 20:59:38                                            */
+/*   Updated:  2024/01/23 07:22:07                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ void Phonebook::search(void)
 	int			i;
 	std::string str;
 
-	if (contacts[0].initialized == false)
+	if (contacts[0].get_initialized() == false)
 	{
 		std::cout << "phonebook is empty\n";
 		return;
@@ -103,14 +103,14 @@ void Phonebook::search(void)
 	std::cout << "---------------------------------------------\n";
 	for (i = 0; i < 8; i++)
 	{
-		if (contacts[i].initialized == false)
+		if (contacts[i].get_initialized() == false)
 		{
 			break;
 		}
 		std::cout << "|         " << i + 1 << '|';
-		print_trunc(contacts[i].first_name);
-		print_trunc(contacts[i].last_name);
-		print_trunc(contacts[i].nick_name);
+		print_trunc(contacts[i].get_first_name());
+		print_trunc(contacts[i].get_last_name());
+		print_trunc(contacts[i].get_nick_name());
 		std::cout << "\n---------------------------------------------\n";
 	}
 	std::cout << "select contact by index for lookup: ";
@@ -126,11 +126,11 @@ void Phonebook::search(void)
 		std::cout << "invalid index given\n";
 		return;
 	}
-	std::cout << "first name: " << contacts[(str[0] - '0') - 1].first_name << '\n';
-	std::cout << "last name: " << contacts[(str[0] - '0') - 1].last_name << '\n';
-	std::cout << "nickname: " << contacts[(str[0] - '0') - 1].nick_name << '\n';
-	std::cout << "phone number: " << contacts[(str[0] - '0') - 1].phone_number << '\n';
-	std::cout << "darkest secret: " << contacts[(str[0] - '0') - 1].darkest_secret << '\n';
+	std::cout << "first name: " << contacts[(str[0] - '0') - 1].get_first_name() << '\n';
+	std::cout << "last name: " << contacts[(str[0] - '0') - 1].get_last_name() << '\n';
+	std::cout << "nickname: " << contacts[(str[0] - '0') - 1].get_nick_name() << '\n';
+	std::cout << "phone number: " << contacts[(str[0] - '0') - 1].get_phone_number() << '\n';
+	std::cout << "darkest secret: " << contacts[(str[0] - '0') - 1].get_darkest_secret() << '\n';
 }
 
 #pragma GCC diagnostic pop

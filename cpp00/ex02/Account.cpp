@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/11/28 12:31:46                                            */
-/*   Updated:  2023/12/02 01:35:26                                            */
+/*   Updated:  2024/01/23 07:32:59                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@
 #pragma GCC diagnostic ignored "-Wextra-semi"
 ;
 
-int	Account::_nbAccounts(0);
-int	Account::_totalAmount(0);
-int	Account::_totalNbDeposits(0);
-int	Account::_totalNbWithdrawals(0);
+int Account::_nbAccounts(0);
+int Account::_totalAmount(0);
+int Account::_totalNbDeposits(0);
+int Account::_totalNbWithdrawals(0);
 
 int Account::getNbAccounts(void)
 {
@@ -60,14 +60,14 @@ void Account::displayAccountsInfos(void)
 {
 	_displayTimestamp();
 	std::cout << "accounts:" << getNbAccounts() << ";toatl:" << getTotalAmount() << ";deposits:" << getNbDeposits()
-		<< ";withdrawals:" << getNbWithdrawals() << '\n';
+			  << ";withdrawals:" << getNbWithdrawals() << '\n';
 }
 
 void Account::displayStatus(void) const
 {
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";deposits:" << _nbDeposits
-		<< ";withdrawals:" << _nbWithdrawals << '\n';
+			  << ";withdrawals:" << _nbWithdrawals << '\n';
 }
 
 void Account::makeDeposit(int deposit)
@@ -76,6 +76,8 @@ void Account::makeDeposit(int deposit)
 	std::cout << "index:" << _accountIndex << ";p_amount:" << _amount << ";deposit:" << deposit;
 	_amount += deposit;
 	_nbDeposits++;
+	_totalNbDeposits++;
+	_totalAmount += deposit;
 	std::cout << ";amount:" << _amount << ";nb_deposits:" << _nbDeposits << '\n';
 }
 
@@ -88,25 +90,26 @@ bool Account::makeWithdrawal(int withdrawal)
 		std::cout << "refused\n";
 		return (false);
 	}
-	std::cout << withdrawal;
 	_amount -= withdrawal;
 	_nbWithdrawals++;
+	_totalNbWithdrawals++;
+	_totalAmount -= withdrawal;
 	std::cout << withdrawal << ";amount:" << _amount << ";nb_withdrawals:" << _nbWithdrawals << '\n';
 	return (true);
 }
 
 Account::~Account(void)
 {
-	
+
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";closed\n";
 }
 
 void Account::_displayTimestamp(void)
 {
-	struct timeval	time;
+	struct timeval time;
 
-	gettimeofday(&time, NULL);	
+	gettimeofday(&time, NULL);
 	std::cout << '[' << time.tv_sec << '_' << time.tv_usec << "] ";
 }
 
