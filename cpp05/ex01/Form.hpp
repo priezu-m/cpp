@@ -19,27 +19,23 @@ class Bureaucrat;
 
 class Form
 {
-	protected:
+	private:
 		static unsigned int const highest_grade = 1;
 		static unsigned int const lowest_grade = 150;
 		std::string				  name;
 		bool					  is_signed;
-		bool					  is_executed;
 		unsigned int const		  grade_to_sing;
-		unsigned int const		  grade_to_execute;
 
 	public:
 		Form(void);
 		explicit Form(std::string const &name_arg);
-		explicit Form(std::string const &name_arg, unsigned int grade_to_sing_arg, unsigned int grade_to_execute_arg);
+		explicit Form(std::string const &name_arg, unsigned int grade_to_sing_arg);
 		Form(Form const &form);
 		virtual ~Form(void);
 
 		bool		 beSigned(Bureaucrat const &bureaucrat);
-		unsigned int getGrade_to_execute(void) const;
 		unsigned int getGrade_to_sing(void) const;
 		bool		 getIs_signed(void) const;
-		bool		 getIs_executed(void) const;
 		std::string	 getName(void) const;
 
 		class GradeTooHighException : public std::runtime_error

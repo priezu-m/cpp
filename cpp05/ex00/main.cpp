@@ -25,8 +25,24 @@
 
 int main()
 {
-	Bureaucrat b1("powerfull bureaucrat", 1);
-	Bureaucrat b2("powerless bureaucrat", 25);
+	try
+	{
+		Bureaucrat b1("powerfull bureaucrat", 1);
+		std::cout << b1 << '\n';
+		b1.increaseGrade();
+	}
+	catch (const std::exception &)
+	{
+	}
+	try
+	{
+		Bureaucrat b2("powerless bureaucrat", 150);
+		b2.decreaseGrade();
+	}
+	catch (const std::exception &)
+	{
+	}
+	Bureaucrat b2("imposibly powerless bureaucrat", 151);
 }
 
 #pragma GCC diagnostic pop

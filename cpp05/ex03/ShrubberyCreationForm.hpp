@@ -15,15 +15,6 @@
 #include "Bureaucrat.hpp"
 #include <string>
 
-;
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wpragmas"
-#pragma GCC diagnostic warning "-Weverything"
-#pragma GCC diagnostic ignored "-Wempty-translation-unit"
-#pragma GCC diagnostic ignored "-Wunused-macros"
-#pragma GCC diagnostic ignored "-Wextra-semi"
-;
-
 class ShrubberyCreationForm : public AForm
 {
 	private:
@@ -38,5 +29,3 @@ class ShrubberyCreationForm : public AForm
 
 		bool execute(Bureaucrat const &bureaucrat);
 };
-
-#pragma GCC diagnostic pop

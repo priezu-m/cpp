@@ -51,20 +51,9 @@ Bureaucrat::~Bureaucrat(void)
 {
 }
 
-bool Bureaucrat::singForm(AForm *form) const
+bool Bureaucrat::singForm(Form *form) const
 {
 	return (form->beSigned(*this));
-}
-
-bool Bureaucrat::executeForm(AForm *form) const
-{
-	bool const ret = form->execute(*this);
-
-	if (ret == true)
-	{
-		std::cout << name << " executed " << form->getName() << '\n';
-	}
-	return (ret);
 }
 
 unsigned int Bureaucrat::getGrade(void) const

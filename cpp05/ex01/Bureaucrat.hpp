@@ -37,7 +37,6 @@ class Bureaucrat
 		~Bureaucrat(void);
 
 		bool		 singForm(Form *form) const;
-		bool		 executeForm(Form *form) const;
 		unsigned int getGrade(void) const;
 		std::string	 getName(void) const;
 		unsigned int increaseGrade(void);

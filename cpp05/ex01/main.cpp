@@ -28,7 +28,13 @@ int main()
 {
 	Bureaucrat	 b1("powerfull bureaucrat", 1);
 	Bureaucrat	 b2("powerless bureaucrat", 25);
-	Form		 f1;
+	Form		 f1("tax form", 10);
+	Form		 f2("tax form", 10);
+
+	std::cout << f1 << '\n';
+	b1.singForm(&f1);
+	b2.singForm(&f1);
+	b2.singForm(&f2);
 }
 
 #pragma GCC diagnostic pop
