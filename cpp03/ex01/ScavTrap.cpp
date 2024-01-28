@@ -6,7 +6,7 @@
 /*   github:   https://github.com/priezu-m                                    */
 /*   Licence:  GPLv3                                                          */
 /*   Created:  2023/12/18 00:31:07                                            */
-/*   Updated:  2023/12/18 01:05:35                                            */
+/*   Updated:  2024/01/28 13:37:49                                            */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,22 @@ ScavTrap::ScavTrap(ScavTrap const &arg)
 	: ClapTrap(arg.get_name(), arg.get_hit_points(), arg.get_energy_points(), arg.get_attack_damage())
 {
 	std::cout << get_name() << " consturcted whit scav trap copy constructor\n";
+}
+
+void ScavTrap::attack(const std::string &target)
+{
+	if (get_hit_points() == 0)
+	{
+		std::cout << "ScavTrap " << get_name() << " is dead\n";
+		return;
+	}
+	if (get_energy_points() == 0)
+	{
+		std::cout << "ScavTrap " << get_name() << " has no remaining energy points\n";
+		return;
+	}
+	std::cout << "ScavTrap " << get_name() << " attacks " << target << " causing " << get_attack_damage() << " points of damage!\n";
+	set_energy_points(get_energy_points() - 1);
 }
 
 ScavTrap ScavTrap::operator=(ScavTrap const &arg)
